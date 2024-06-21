@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_921f170ffbb56116fc7bbc80933f0d47 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_921f170ffbb56116fc7bbc80933f0d47" ></div>
+        
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 170px; height: 100px; 
+                border:2px solid grey; z-index:9999; font-size:14px;
+                background-color: white; padding: 5px;">
+                &nbsp; Color Legend <br>
+                &nbsp; Top 5 - <i style="color:green">Green</i><br>
+                &nbsp; Rank 6-10 - <i style="color:orange">Orange</i><br>
+                &nbsp; Rank 11-15 - <i style="color:red">Red</i>
+    </div>
+    
+</body>
+<script>
+    
+    
+            var map_921f170ffbb56116fc7bbc80933f0d47 = L.map(
+                "map_921f170ffbb56116fc7bbc80933f0d47",
+                {
+                    center: [42.35133333333332, -71.11179333333332],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_19e488ac8cd17d19a8451ec319701168 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_19e488ac8cd17d19a8451ec319701168.addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var marker_6be55d377b9873ec17396e0c1ed80cc4 = L.marker(
+                [42.354, -71.1203],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_aeb9b0a135ecedb0d7c332aed61e7cd8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6be55d377b9873ec17396e0c1ed80cc4.setIcon(icon_aeb9b0a135ecedb0d7c332aed61e7cd8);
+        
+    
+        var popup_72245eb51ff81a9ee7fafb65d2d93e5b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_70a581b461920ca8c82ca72c957efe2b = $(`<div id="html_70a581b461920ca8c82ca72c957efe2b" style="width: 100.0%; height: 100.0%;">Rank: 1 Building: 285 BABCOCK STREET Floor: 3 Weight: 1703.998059329082 Type: Athletic</div>`)[0];
+                popup_72245eb51ff81a9ee7fafb65d2d93e5b.setContent(html_70a581b461920ca8c82ca72c957efe2b);
+            
+        
+
+        marker_6be55d377b9873ec17396e0c1ed80cc4.bindPopup(popup_72245eb51ff81a9ee7fafb65d2d93e5b)
+        ;
+
+        
+    
+    
+            var marker_1c972329bc1c50b828e54ea1959cdf4f = L.marker(
+                [42.3522, -71.1177],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_f1c7816ced7ceb0cdd6f5b2ed40e010a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1c972329bc1c50b828e54ea1959cdf4f.setIcon(icon_f1c7816ced7ceb0cdd6f5b2ed40e010a);
+        
+    
+        var popup_f87f3cb82c718608cfdee17230d8c1d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba3288f5525abe8585a634ee14b76833 = $(`<div id="html_ba3288f5525abe8585a634ee14b76833" style="width: 100.0%; height: 100.0%;">Rank: 2 Building: 925 COMMONWEALTH AVENUE Floor: c Weight: 1614.5451776649747 Type: Athletic</div>`)[0];
+                popup_f87f3cb82c718608cfdee17230d8c1d2.setContent(html_ba3288f5525abe8585a634ee14b76833);
+            
+        
+
+        marker_1c972329bc1c50b828e54ea1959cdf4f.bindPopup(popup_f87f3cb82c718608cfdee17230d8c1d2)
+        ;
+
+        
+    
+    
+            var marker_b6566036e58620dff2459e1b7ecf72e4 = L.marker(
+                [42.3524, -71.11749999999999],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_1156ed84415ff4209f5ab53f434bafa6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b6566036e58620dff2459e1b7ecf72e4.setIcon(icon_1156ed84415ff4209f5ab53f434bafa6);
+        
+    
+        var popup_8b86bde1b2a7a607e219c0ff4d931fd5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_731c4543f34b5f037d49aa9f548cb054 = $(`<div id="html_731c4543f34b5f037d49aa9f548cb054" style="width: 100.0%; height: 100.0%;">Rank: 3 Building: 925 COMMONWEALTH AVENUE Floor: 3 Weight: 598.2118555741672 Type: Athletic</div>`)[0];
+                popup_8b86bde1b2a7a607e219c0ff4d931fd5.setContent(html_731c4543f34b5f037d49aa9f548cb054);
+            
+        
+
+        marker_b6566036e58620dff2459e1b7ecf72e4.bindPopup(popup_8b86bde1b2a7a607e219c0ff4d931fd5)
+        ;
+
+        
+    
+    
+            var marker_5a7469edffc715a4658d42e56d7b41ba = L.marker(
+                [42.3509, -71.109],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_0dcfe732666bfa462a57be05e21d1818 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5a7469edffc715a4658d42e56d7b41ba.setIcon(icon_0dcfe732666bfa462a57be05e21d1818);
+        
+    
+        var popup_90c44fc9656037c7dda1f7f1a41753f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b45e4b8ef73e8c4c443cf26cf3b24c88 = $(`<div id="html_b45e4b8ef73e8c4c443cf26cf3b24c88" style="width: 100.0%; height: 100.0%;">Rank: 4 Building: 775 COMMONWEALTH AVENUE Floor: 3 Weight: 493.6014381099127 Type: Student Support</div>`)[0];
+                popup_90c44fc9656037c7dda1f7f1a41753f6.setContent(html_b45e4b8ef73e8c4c443cf26cf3b24c88);
+            
+        
+
+        marker_5a7469edffc715a4658d42e56d7b41ba.bindPopup(popup_90c44fc9656037c7dda1f7f1a41753f6)
+        ;
+
+        
+    
+    
+            var marker_ea545057d410fe282d2cb1cdebea69b9 = L.marker(
+                [42.3493, -71.104],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_46de792db78170b62a46d1c182715766 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ea545057d410fe282d2cb1cdebea69b9.setIcon(icon_46de792db78170b62a46d1c182715766);
+        
+    
+        var popup_b89ca096e702e9c8cc2fed0bf0f8e99f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56c3ff6f167fcf7af6953be33f68bdb9 = $(`<div id="html_56c3ff6f167fcf7af6953be33f68bdb9" style="width: 100.0%; height: 100.0%;">Rank: 5 Building: 700 COMMONWEALTH AVENUE Floor: -1 Weight: 324.3480466580263 Type: Residential</div>`)[0];
+                popup_b89ca096e702e9c8cc2fed0bf0f8e99f.setContent(html_56c3ff6f167fcf7af6953be33f68bdb9);
+            
+        
+
+        marker_ea545057d410fe282d2cb1cdebea69b9.bindPopup(popup_b89ca096e702e9c8cc2fed0bf0f8e99f)
+        ;
+
+        
+    
+    
+            var marker_691bcf9cc2d5b841f0c46fafac8ec191 = L.marker(
+                [42.3546, -71.1236],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_43b3d69b8991947464847d2c3e4c89e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_691bcf9cc2d5b841f0c46fafac8ec191.setIcon(icon_43b3d69b8991947464847d2c3e4c89e6);
+        
+    
+        var popup_51d9a956c0176b791940e78a1e167945 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_825ca6751eb35a5fd053480f9b15f723 = $(`<div id="html_825ca6751eb35a5fd053480f9b15f723" style="width: 100.0%; height: 100.0%;">Rank: 6 Building: 100 ASHFORD STREET Floor: 2 Weight: 262.9522640480087 Type: Athletic</div>`)[0];
+                popup_51d9a956c0176b791940e78a1e167945.setContent(html_825ca6751eb35a5fd053480f9b15f723);
+            
+        
+
+        marker_691bcf9cc2d5b841f0c46fafac8ec191.bindPopup(popup_51d9a956c0176b791940e78a1e167945)
+        ;
+
+        
+    
+    
+            var marker_5fd7857209660e0fcd0fc81c4c5f8584 = L.marker(
+                [42.3495, -71.10379999999999],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_a13d30917b25209d365e88e41b6d9a36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_5fd7857209660e0fcd0fc81c4c5f8584.setIcon(icon_a13d30917b25209d365e88e41b6d9a36);
+        
+    
+        var popup_b225b1e3d93d5200b9da902fc64485e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ad64a9f93ff7e5b3f7d616573fd61f7 = $(`<div id="html_8ad64a9f93ff7e5b3f7d616573fd61f7" style="width: 100.0%; height: 100.0%;">Rank: 7 Building: 700 COMMONWEALTH AVENUE Floor: 1 Weight: 255.13427302144464 Type: Residential</div>`)[0];
+                popup_b225b1e3d93d5200b9da902fc64485e2.setContent(html_8ad64a9f93ff7e5b3f7d616573fd61f7);
+            
+        
+
+        marker_5fd7857209660e0fcd0fc81c4c5f8584.bindPopup(popup_b225b1e3d93d5200b9da902fc64485e2)
+        ;
+
+        
+    
+    
+            var marker_c3e38c5826a3bb9ef1b874e248bb0b3d = L.marker(
+                [42.3519, -71.1187],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_d33220fec3210e34b347d0dc257f53d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c3e38c5826a3bb9ef1b874e248bb0b3d.setIcon(icon_d33220fec3210e34b347d0dc257f53d6);
+        
+    
+        var popup_bb12ca0c0c0086b85abb8a21b5851aee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce61314f88efc8a64ea037ca92ce73a0 = $(`<div id="html_ce61314f88efc8a64ea037ca92ce73a0" style="width: 100.0%; height: 100.0%;">Rank: 8 Building: 949 COMMONWEALTH AVENUE Floor: 1 Weight: 174.84887387387388 Type: Academic</div>`)[0];
+                popup_bb12ca0c0c0086b85abb8a21b5851aee.setContent(html_ce61314f88efc8a64ea037ca92ce73a0);
+            
+        
+
+        marker_c3e38c5826a3bb9ef1b874e248bb0b3d.bindPopup(popup_bb12ca0c0c0086b85abb8a21b5851aee)
+        ;
+
+        
+    
+    
+            var marker_78541e868a0d7bc7bd7f1a38b38bad7d = L.marker(
+                [42.3497, -71.1013],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_73bc75bf55b480a6b8d26c91b1a1c572 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_78541e868a0d7bc7bd7f1a38b38bad7d.setIcon(icon_73bc75bf55b480a6b8d26c91b1a1c572);
+        
+    
+        var popup_1572a2a6f522f6018469ff25482c8a4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f3d2da6992be27fc2bb1bc600caadf4 = $(`<div id="html_6f3d2da6992be27fc2bb1bc600caadf4" style="width: 100.0%; height: 100.0%;">Rank: 9 Building: 617-621 COMMONWEALTH AVENUE Floor: 4 Weight: 161.30638337701234 Type: Academic</div>`)[0];
+                popup_1572a2a6f522f6018469ff25482c8a4d.setContent(html_6f3d2da6992be27fc2bb1bc600caadf4);
+            
+        
+
+        marker_78541e868a0d7bc7bd7f1a38b38bad7d.bindPopup(popup_1572a2a6f522f6018469ff25482c8a4d)
+        ;
+
+        
+    
+    
+            var marker_51804ba82b22f0d1cfb6dbd7163366c5 = L.marker(
+                [42.3492, -71.1061],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_0af726a03ac11800bdccf444f9204032 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_51804ba82b22f0d1cfb6dbd7163366c5.setIcon(icon_0af726a03ac11800bdccf444f9204032);
+        
+    
+        var popup_b862d4d27ee8b1f8630a6d72e9f0a020 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b53d06653b2a57d0b7fff736f33bdd68 = $(`<div id="html_b53d06653b2a57d0b7fff736f33bdd68" style="width: 100.0%; height: 100.0%;">Rank: 10 Building: 8 ST. MARY'S STREET Floor: 2 Weight: 159.69770461085457 Type: Research</div>`)[0];
+                popup_b862d4d27ee8b1f8630a6d72e9f0a020.setContent(html_b53d06653b2a57d0b7fff736f33bdd68);
+            
+        
+
+        marker_51804ba82b22f0d1cfb6dbd7163366c5.bindPopup(popup_b862d4d27ee8b1f8630a6d72e9f0a020)
+        ;
+
+        
+    
+    
+            var marker_e06435d91532316f433eb9dff427961d = L.marker(
+                [42.3542, -71.1201],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_918f7accb2bce44938fcab2a3ea1ecc0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e06435d91532316f433eb9dff427961d.setIcon(icon_918f7accb2bce44938fcab2a3ea1ecc0);
+        
+    
+        var popup_a33cfa1e1411cde88af6744118aacede = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48680fb8b0efec6ea8b4d919146ed659 = $(`<div id="html_48680fb8b0efec6ea8b4d919146ed659" style="width: 100.0%; height: 100.0%;">Rank: 11 Building: 285 BABCOCK STREET Floor: 4 Weight: 140.1428073289799 Type: Athletic</div>`)[0];
+                popup_a33cfa1e1411cde88af6744118aacede.setContent(html_48680fb8b0efec6ea8b4d919146ed659);
+            
+        
+
+        marker_e06435d91532316f433eb9dff427961d.bindPopup(popup_a33cfa1e1411cde88af6744118aacede)
+        ;
+
+        
+    
+    
+            var marker_6682d2c416382134d5f9e1fb35cb2cc8 = L.marker(
+                [42.3544, -71.1199],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_d64949e25292cd50b9dc092225abbb6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6682d2c416382134d5f9e1fb35cb2cc8.setIcon(icon_d64949e25292cd50b9dc092225abbb6a);
+        
+    
+        var popup_533849f4702a735b80a7a69d21b35755 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1a1e00fdc1ff94c8e0816f7602b2107 = $(`<div id="html_f1a1e00fdc1ff94c8e0816f7602b2107" style="width: 100.0%; height: 100.0%;">Rank: 12 Building: 285 BABCOCK STREET Floor: 2 Weight: 132.1275373721479 Type: Athletic</div>`)[0];
+                popup_533849f4702a735b80a7a69d21b35755.setContent(html_f1a1e00fdc1ff94c8e0816f7602b2107);
+            
+        
+
+        marker_6682d2c416382134d5f9e1fb35cb2cc8.bindPopup(popup_533849f4702a735b80a7a69d21b35755)
+        ;
+
+        
+    
+    
+            var marker_bbb3e5da643da8e94fa266af971c3c76 = L.marker(
+                [42.3498, -71.108],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_b8def59cff2b42167cffc120357032d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bbb3e5da643da8e94fa266af971c3c76.setIcon(icon_b8def59cff2b42167cffc120357032d5);
+        
+    
+        var popup_73ac17518b4fc40fda68475b0fd3612d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b90ab26ce306d618e5e418b8e0131e8d = $(`<div id="html_b90ab26ce306d618e5e418b8e0131e8d" style="width: 100.0%; height: 100.0%;">Rank: 13 Building: 750 COMMONWEALTH AVENUE Floor: 2 Weight: 131.6557754637611 Type: Academic</div>`)[0];
+                popup_73ac17518b4fc40fda68475b0fd3612d.setContent(html_b90ab26ce306d618e5e418b8e0131e8d);
+            
+        
+
+        marker_bbb3e5da643da8e94fa266af971c3c76.bindPopup(popup_73ac17518b4fc40fda68475b0fd3612d)
+        ;
+
+        
+    
+    
+            var marker_364fbd537b5a5113d7bdaa94e3cbc774 = L.marker(
+                [42.3502, -71.1046],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_9e29f74d1590b8a92f2fffe90fa74d20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_364fbd537b5a5113d7bdaa94e3cbc774.setIcon(icon_9e29f74d1590b8a92f2fffe90fa74d20);
+        
+    
+        var popup_d492fc816d424e2fc29f9cd7c4aaa059 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5329de8d0d6ba1cfb05932c6750c1e27 = $(`<div id="html_5329de8d0d6ba1cfb05932c6750c1e27" style="width: 100.0%; height: 100.0%;">Rank: 14 Building: 675 - 725 COMMONWEALTH AVENUE Floor: t Weight: 124.51080672776716 Type: Research</div>`)[0];
+                popup_d492fc816d424e2fc29f9cd7c4aaa059.setContent(html_5329de8d0d6ba1cfb05932c6750c1e27);
+            
+        
+
+        marker_364fbd537b5a5113d7bdaa94e3cbc774.bindPopup(popup_d492fc816d424e2fc29f9cd7c4aaa059)
+        ;
+
+        
+    
+    
+            var marker_8bc9f9585b499d01a227278def23dc30 = L.marker(
+                [42.3487, -71.1013],
+                {}
+            ).addTo(map_921f170ffbb56116fc7bbc80933f0d47);
+        
+    
+            var icon_8c96bd711f82e799c426731fe6b96459 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8bc9f9585b499d01a227278def23dc30.setIcon(icon_8c96bd711f82e799c426731fe6b96459);
+        
+    
+        var popup_de274b9316b35537f85fe58619898d7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68ddf81904a498f921246951ddef87a3 = $(`<div id="html_68ddf81904a498f921246951ddef87a3" style="width: 100.0%; height: 100.0%;">Rank: 15 Building: 3 - 5 CUMMINGTON MALL Floor: 2 Weight: 122.97343565525384 Type: Research</div>`)[0];
+                popup_de274b9316b35537f85fe58619898d7a.setContent(html_68ddf81904a498f921246951ddef87a3);
+            
+        
+
+        marker_8bc9f9585b499d01a227278def23dc30.bindPopup(popup_de274b9316b35537f85fe58619898d7a)
+        ;
+
+        
+    
+</script>
+</html>
